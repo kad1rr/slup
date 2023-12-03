@@ -1,0 +1,41 @@
+{
+  "name": "sulp",
+  "version": "0.0.1-beta.1",
+  "description": "Bash Scripting. Rewrited",
+  "packageManager": "pnpm@8.11.0",
+  "bin": {
+    "sulp": "bin/sulp.js",
+    "sulpc": "bin/sulp.compiler.js"
+  },
+  "main": "src/index.js",
+  "keywords": [
+    "lang",
+    "programming language",
+    "bash",
+    "script",
+    "scripting language",
+    "shell",
+    "terminal",
+    "sulpbash",
+    "sulplang",
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "author": "Kadir",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "homepage": "https://github.com/kad1rr/sulp",
+  "bugs": {
+    "url": "https://github.com/kad1rr/sulp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kad1rr/sulp.git"
+  }
+}
