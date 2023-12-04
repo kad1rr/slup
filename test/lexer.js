@@ -8,7 +8,7 @@ console.clear();
 const testCode = `
 x = 42
 y = "hello, world!"
-if x > 0 && y !== null {
+if x > 0 && y != null {
     print "Condition is true"
 } else {
     print "Condition is false"

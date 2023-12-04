@@ -9,40 +9,7 @@ module.exports = class Lexer {
     this._line = 1;
   }
 
-  TokenTypes = {
-    Identifier: 0,
-    Number: 1,
-    String: 2,
-    Keyword: 4,
-    LParen: 5,
-    RParen: 6,
-    LBrace: 7,
-    RBrace: 8,
-    LBracket: 9,
-    RBracket: 10,
-    LCurly: 11,
-    RCurly: 12,
-    Comma: 14,
-    Dot: 16,
-    Equals: 17,
-    Plus: 18,
-    Minus: 19,
-    Star: 20,
-    Slash: 21,
-    Call: 22,
-    Colon: 23,
-    LessThan: 25,
-    GreaterThan: 26,
-    LessThanEqual: 27,
-    GreaterThanEqual: 28,
-    And: 29,
-    Or: 30,
-    Not: 31,
-    PlusPlus: 32,
-    MinusMinus: 33,
-    TStar: 34,
-    END: 35,
-  };
+  TokenTypes = require("./tokens.js");
 
   token = (type, value) => {
     return {
@@ -136,8 +103,7 @@ module.exports = class Lexer {
             this._tokens.push(this.token(this.TokenTypes.TStar, "**"));
             this._pos += 2;
             break;
-          } // String Token
-          else if (input[this._pos] === '"') {
+          } else if (input[this._pos] === '"') {
             let stringLiteral = "";
             this._pos++;
             while (this._pos < input.length && input[this._pos] !== '"') {
